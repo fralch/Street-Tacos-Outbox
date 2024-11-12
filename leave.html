@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Tacos</title>
+    <style>
+        /* Eliminar margen y padding de body y html, y evitar scroll */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evitar el scroll */
+            background-image: url("/img/FONDO.png");
+            background-size: cover;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        .btn {
+            background-color: #f2a900;
+            color: #000;
+            padding: 20px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e69500;
+        }
+
+        #foot {
+            background-image: url("/img/footer.png");
+            background-size: auto 30%; /* La altura de la imagen será el 40% del contenedor */
+            background-position: left bottom; /* Centra la imagen en la parte inferior */
+            background-repeat: no-repeat;
+            position: fixed;
+            bottom: 48px;
+            left: 0;
+            right: 0;
+        }
+     
+        /* Mostrar imagen para dispositivos con pantalla pequeña */
+        @media screen and (max-width: 600px) {
+            /* estilos cabecera */
+
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            header img {
+                width: 40%;
+                height: auto;
+            }
+            header img{
+                width: 40%;
+                height: auto;
+            }
+            /* estilos cuerpo */
+            #logo_min {
+                width: 30%;
+                height: auto;
+                margin-left: 35%;
+            }
+
+           
+            #logo {
+                width: 80%;
+                height: auto;
+                margin-top: 12%; 
+                margin-left: 10%;
+            }
+
+            #opinion {
+                width: 60%;
+                height: auto;
+                margin-left: 20%;
+            }
+
+            #hamburguesa {
+                width: 80%;
+                height: auto;
+                margin-top: 20%; 
+            }
+        }
+        
+        /* Mostrar imagen para pantallas grandes */
+        @media screen and (min-width: 601px) {
+            
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <img src="/img/banderas_derecha.png" alt="">
+        <img src="/img/banderas_izquierda.png" alt="">
+    </header>
+     
+    <img src="/img/street.png" alt="" id="logo_min">
+    <img src="/img/LEAVE_US.svg" alt="" id="logo">
+    <img src="/img/YOUR_OPINION.svg" alt="" id="opinion">
+
+    <div class="buttons">
+        
+    </div>
+   
+
+  </body>
+</html>
