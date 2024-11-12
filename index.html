@@ -44,8 +44,8 @@
 
         #foot {
             background-image: url("/img/footer.png");
-            background-size: auto 30%; /* La altura de la imagen será el 40% del contenedor */
-            background-position: left bottom; /* Centra la imagen en la parte inferior */
+            background-size: auto 30%;
+            background-position: left bottom;
             background-repeat: no-repeat;
             position: fixed;
             bottom: 48px;
@@ -56,7 +56,6 @@
         /* Mostrar imagen para dispositivos con pantalla pequeña */
         @media screen and (max-width: 600px) {
             /* estilos cabecera */
-
             header {
                 display: flex;
                 flex-direction: row;
@@ -66,12 +65,8 @@
                 width: 40%;
                 height: auto;
             }
-            header img{
-                width: 40%;
-                height: auto;
-            }
+
             /* estilos cuerpo */
-           
             #logo {
                 width: 100%;
                 height: auto;
@@ -83,11 +78,62 @@
                 height: auto;
                 margin-top: 20%; 
             }
+
+            .buttons {
+                width: 80%;
+                margin-top: 5%;
+            }
+
+            .btn {
+                font-size: 1em;
+                padding: 15px;
+            }
         }
         
         /* Mostrar imagen para pantallas grandes */
         @media screen and (min-width: 601px) {
-            
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            header img {
+                width: 20%;
+                height: auto;
+            }
+
+            #logo {
+                width: 50%;
+                height: auto;
+                margin-left: 50%;
+                display: block;
+                margin-top: 3%;
+            }
+
+            .buttons {
+                width: 50%;
+                margin-left: 50%;
+                gap: 20px;
+                margin-top: 0;
+            }
+
+            .btn {
+                font-size: 1.2em;
+                padding: 20px 20px;
+                width: 60%;
+                margin-left: 20%;
+            }
+
+            #hamburguesa {
+                width: 50%;
+                height: auto;
+                z-index: -1 ;
+            }
+            #foot {
+                bottom: 30px;
+            }
+
+     
         }
     </style>
   </head>
@@ -101,7 +147,7 @@
 
     <div class="buttons">
         <a href="#" class="btn recommend">Yes, I recommend them!</a>
-        <a href="leave.html" class="btn suggest" >No, I have a suggestion!</a>
+        <a href="leave.html" class="btn suggest" style="z-index: 1;">No, I have a suggestion!</a>
     </div>
     <div id="foot">
         <img src="/img/hamburguesa.png" alt="" id="hamburguesa">

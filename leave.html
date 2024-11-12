@@ -16,47 +16,52 @@
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
 
-        .buttons {
+        /* Estilos generales para el formulario */
+        .form {
             display: flex;
             flex-direction: column;
+            align-items: center;
             gap: 10px;
-            width: 70%;
-            margin: 0 auto;
-            margin-top: 10%;
+            margin-top: 20px;
+        }
+
+        .form input, .form textarea {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .form textarea {
+            resize: vertical;
+        }
+
+        /* Estilos para el placeholder */
+        .form input::placeholder, .form textarea::placeholder {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #999; /* Color del placeholder */
         }
 
         .btn {
             background-color: #f2a900;
             color: #000;
-            padding: 20px 20px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-size: 1em;
+            font-weight: bold;
             cursor: pointer;
             text-align: center;
+        }
+        a{
             text-decoration: none;
-            transition: background-color 0.3s ease;
         }
 
-        .btn:hover {
-            background-color: #e69500;
-        }
-
-        #foot {
-            background-image: url("/img/footer.png");
-            background-size: auto 30%; /* La altura de la imagen será el 40% del contenedor */
-            background-position: left bottom; /* Centra la imagen en la parte inferior */
-            background-repeat: no-repeat;
-            position: fixed;
-            bottom: 48px;
-            left: 0;
-            right: 0;
-        }
-     
         /* Mostrar imagen para dispositivos con pantalla pequeña */
         @media screen and (max-width: 600px) {
             /* estilos cabecera */
-
             header {
                 display: flex;
                 flex-direction: row;
@@ -66,10 +71,7 @@
                 width: 40%;
                 height: auto;
             }
-            header img{
-                width: 40%;
-                height: auto;
-            }
+
             /* estilos cuerpo */
             #logo_min {
                 width: 30%;
@@ -77,11 +79,9 @@
                 margin-left: 35%;
             }
 
-           
             #logo {
                 width: 80%;
                 height: auto;
-                margin-top: 12%; 
                 margin-left: 10%;
             }
 
@@ -91,16 +91,51 @@
                 margin-left: 20%;
             }
 
-            #hamburguesa {
-                width: 80%;
-                height: auto;
-                margin-top: 20%; 
+            #form {
+                 display: flex;
+                 flex-direction: row;
+                 justify-content: center;
+                 align-items: center;
+                 gap: 10px;
             }
         }
-        
+
         /* Mostrar imagen para pantallas grandes */
         @media screen and (min-width: 601px) {
-            
+            /* estilos cabecera */
+            header {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            header img {
+                width: 20%;
+                height: auto;
+            }
+
+            /* estilos cuerpo */
+            #logo_min {
+                width: 10%;
+                height: auto;
+                margin-left: 45%;
+            }
+
+            #logo {
+                width: 30%;
+                height: auto;
+                margin-left: 35%;
+            }
+
+            #opinion {
+                width: 20%;
+                height: auto;
+                margin-left: 40%;
+            }
+
+            .form {
+                width: 40%;
+                margin: 20px auto;
+            }
         }
     </style>
   </head>
@@ -109,15 +144,17 @@
         <img src="/img/banderas_derecha.png" alt="">
         <img src="/img/banderas_izquierda.png" alt="">
     </header>
-     
+
     <img src="/img/street.png" alt="" id="logo_min">
     <img src="/img/LEAVE_US.svg" alt="" id="logo">
     <img src="/img/YOUR_OPINION.svg" alt="" id="opinion">
 
-    <div class="buttons">
-        
+    <div class="form">
+        <input type="text" name="nombre" id="nombre" placeholder="Name">
+        <input type="text" name="phone" id="phone" placeholder="Phone">
+        <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Write your opinion"></textarea>
+        <a href="#" class="btn"> Submit</a>
     </div>
-   
 
   </body>
 </html>
